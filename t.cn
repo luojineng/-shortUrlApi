@@ -4,6 +4,9 @@
  * @copyright Ufec
  * @link https://github.com/ufec/shortUrlApi
  * @version 1.0
+ * 本次更新使用新浪微博发私信来实现
+ * @ eiboCookie.txt文件内填入cookie
+ * @ $userId = "2735327001";//微博安全中心id
  */
 header("Content-Type:text/json; charset=utf-8");
 class Url
