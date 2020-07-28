@@ -33,7 +33,10 @@ class Chrise
 
     private function url($url)
     {
-        $content = file_get_contents("https://vip.video.qq.com/fcgi-bin/comm_cgi?name=short_url&need_short_url=1&url=https://c.pc.qq.com/middleb.html?pfurl=$url");
+	//https://c.pc.qq.com/middleb.html?pfurl=
+	//https://support.qq.com/products/144996/link-jump?jump=
+	$jump_url = 'https://support.qq.com/products/144996/link-jump?jump='.urlencode($url);
+        $content = file_get_contents("https://vip.video.qq.com/fcgi-bin/comm_cgi?name=short_url&need_short_url=1&url=".urlencode($jump_url));
         $content = mb_substr($content,stripos($content, '{'), strripos($content, '}')-stripos($content, '{')+1, 'UTF-8');
         $data = json_decode($content, 1);
         if ($data['msg'] == 'ok' && $data['short_url']) {
