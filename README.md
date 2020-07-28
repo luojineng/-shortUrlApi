@@ -1,5 +1,4 @@
 # -shortUrlApi
-新浪微博，腾讯微博短网址接口
 
 #shortUrlApi 来源：https://gitee.com/ufec/shortUrlApi
 腾讯、新浪、百度短链接API 用得上标个星，让我看到你
