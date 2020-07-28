@@ -34,6 +34,7 @@ class Chrise
     private function url($url)
     {
 	//https://c.pc.qq.com/middleb.html?pfurl=
+	//https://developers.weixin.qq.com/community/middlepage/href?href=
 	//https://support.qq.com/products/144996/link-jump?jump=
 	$jump_url = 'https://support.qq.com/products/144996/link-jump?jump='.urlencode($url);
         $content = file_get_contents("https://vip.video.qq.com/fcgi-bin/comm_cgi?name=short_url&need_short_url=1&url=".urlencode($jump_url));
